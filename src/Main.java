@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static utils.MenuUtils.showMainMenu;
-import static utils.MenuUtils.showNPCMenu;
 import static utils.ScanUtils.askForInt;
 import static utils.ScanUtils.askForString;
 import static utils.UtilsFile.*;
@@ -35,7 +34,6 @@ public class Main {
                     int option = showMainMenu();
                     switch (option) {
                         case 1:
-                            //optionsNPC(npcList);
                            //1- Consultar los los ítems de un vendedor.
                             Integer number = askForInt("Select:\n 1-Farmer\n 2-Thief \n 3-Merchant\n");
                             if (number == 1)
@@ -119,37 +117,5 @@ public class Main {
 
         return itemlist;
     }
-
-    private static void optionsNPC(List<NPC> npcList) {
-        Boolean exit = false;
-
-        try {
-            do {
-                try {
-                    int option = showNPCMenu();
-                    switch (option) {
-                        case 1:
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
-                        case 4:
-                            exit = true;
-                            break;
-                        default:
-                            JOptionPane.showMessageDialog(null, "Incorrect option");
-                            break;
-                    }
-                } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "Incorrect option");
-                }
-            } while (!exit);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Bye!!!");
-        }
-
-    }
-
 
 }

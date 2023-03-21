@@ -33,7 +33,6 @@ public class ScanUtils {
             } catch (InputMismatchException ex) {
                 System.out.println("ERROR. Input type mismatch\n");
             }
-            sc.nextLine();
         } while (!ok);
         return integer;
     }

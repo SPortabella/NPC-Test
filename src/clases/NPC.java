@@ -6,7 +6,7 @@ import java.util.List;
 public class NPC {
     private String city;
 
-    List<Item> items = new ArrayList<>();
+    List<Item> items;
 
     public void showItems () {
         items.stream().forEach(System.out::println);

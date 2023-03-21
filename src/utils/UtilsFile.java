@@ -41,33 +41,6 @@ public class UtilsFile {
         return npcList;
     }
 
-    public static HashMap<String,NPC> ProcessFile1(List<String> lista, HashMap<String, NPC> npcHashMap) {
-        if (lista.size() == 0)
-            initnpcHashMap(npcHashMap);
-        else {
-            for (String str : lista) {
-                String[] parts = str.split(";");
-                List<Item> items = readItems(parts);
-                switch (parts[0]) {
-                    case "FARMER":
-                        Farmer farmer = new Farmer(parts[1]);
-                        for (Item item : items) {
-                            farmer.addItem(item);
-                        }
-                        npcHashMap.put("FARMER",farmer);
-                    case "THIEF":
-                    case "MERCHANT":
-                }
-            }
-        }
-        return npcHashMap;
-    }
-
-    private static void initnpcHashMap(HashMap<String, NPC> npcHashMap) {
-        npcHashMap.put("FARMER",null);
-        npcHashMap.put("THIEF",null);
-        npcHashMap.put("MARCHANT",null);
-    }
 
     private static void initnpcList(List<NPC> npcList) {
         npcList.add (new NPC()); //farmer

@@ -30,15 +30,4 @@ public class MenuUtils {
         } while (!ok);
         return integer;
     }
-    public static Integer showNPCMenu() {
-        String cad = "";
-        cad += "Menu NPC: \n";
-        cad += "1. Menu Farmer\n";
-        cad += "2. Menu Thief\n";
-        cad += "3. Menu Merchant\n";
-        cad += "4. Salir\n\n";
-        Integer option = Integer.parseInt(JOptionPane.showInputDialog(cad));
-
-        return option;
-    }
 }
